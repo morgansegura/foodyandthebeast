@@ -1,0 +1,379 @@
+.foody-font {
+  font-family: 'Acme', sans-serif; }
+
+.beast-font {
+  font-family: 'Anton', sans-serif; }
+
+.foody-font.headline,
+.beast-font.headline {
+  font-size: 60px;
+  text-align: center;
+  margin: 20px auto; }
+
+body {
+  font-family: montserrat, serif;
+  font-size: 16px;
+  color: #333;
+  position: relative;
+  background: #111; }
+
+.wrapper {
+  width: 100%; }
+
+.side-padding {
+  padding: 40px 4%;
+  width: 94%;
+  height: 110%;
+  overflow: scroll; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 10px;
+  margin: 0 auto;
+  min-height: 1000px; }
+
+/* Hamburger */
+.c-hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 96px;
+  height: 96px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s; }
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 44px;
+  left: 18px;
+  right: 18px;
+  height: 8px;
+  background: white; }
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #fff;
+  content: ""; }
+
+.c-hamburger span::before {
+  top: -20px; }
+
+.c-hamburger span::after {
+  bottom: -20px; }
+
+.c-hamburger:focus {
+  outline: none; }
+
+.c-hamburger--htx {
+  background-color: #ff3264; }
+
+.c-hamburger--htx span {
+  transition: background 0s 0.3s; }
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s; }
+
+.c-hamburger--htx span::before {
+  transition-property: top, transform; }
+
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform; }
+
+/* active state, i.e. menu open */
+.c-hamburger--htx.is-active {
+  background-color: #cb0032; }
+
+.c-hamburger--htx.is-active span {
+  background: none; }
+
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg); }
+
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg); }
+
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  transition-delay: 0s, 0.3s; }
+
+/* Sticky State */
+.sticky .c-hamburger {
+  width: 48px;
+  height: 48px; }
+
+.sticky .c-hamburger span {
+  top: 21px;
+  left: 9px;
+  right: 0;
+  height: 5px;
+  width: 30px; }
+
+.sticky .c-hamburger span::before {
+  top: -10px;
+  height: 5px; }
+
+.sticky .c-hamburger span::after {
+  bottom: -10px;
+  height: 5px; }
+
+/* is-active */
+.sticky .c-hamburger.is-active span::before,
+.sticky .c-hamburger.is-active span::after {
+  top: 0px;
+  height: 5px; }
+
+/* End Hamburger */
+/* Sticky */
+header {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-size: 72px;
+  background: #fff;
+  color: #fff;
+  z-index: 1000; }
+
+header.sticky {
+  font-size: 24px;
+  line-height: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: left; }
+
+/* End Sticky */
+header.sticky .wrapper {
+  padding-top: 148px; }
+
+.main-nav li {
+  margin: 0 20px 0 0;
+  float: left; }
+
+.logo-box {
+  background: #ff3264;
+  border-radius: 100%;
+  padding: 5px 10px;
+  display: inline-block; }
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none; }
+
+.header-slogan {
+  position: absolute;
+  left: 35%;
+  top: 12%; }
+
+.foody-side,
+.beast-side {
+  float: left;
+  width: 50%;
+  padding-top: 108px; }
+
+.foody-side {
+  background: #BABBDA;
+  left: 0; }
+
+.beast-side {
+  background: #A5C47D;
+  right: 0; }
+
+.avatar-icons {
+  width: 100%;
+  margin: 0 15px 15px 0;
+  max-width: 200px;
+  text-align: center;
+  display: block; }
+
+.logo {
+  max-width: 40px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: 10px; }
+
+.slogan {
+  position: absolute;
+  left: 32.7%;
+  top: 6%;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  border: 3px solid #fff;
+  max-width: 250px;
+  padding: 10px;
+  z-index: 2; }
+
+.underline-content {
+  border: 1px solid #fff;
+  height: 0; }
+
+.navigation {
+  display: none;
+  position: absolute;
+  top: 96px;
+  left: 0;
+  text-align: left;
+  color: #ccc;
+  padding: 0;
+  font-size: 14px;
+  width: 200px;
+  -webkit-transition: all 1.0s ease-in-out;
+  -moz-transition: all 1.0s ease-in-out;
+  -o-transition: all 1.0s ease-in-out;
+  transition: all 1.0s ease-in-out; }
+
+.sticky .navigation {
+  top: 48px; }
+
+.navigation li {
+  float: none;
+  margin: 0; }
+
+.navigation p {
+  padding: 5px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #333; }
+
+.navigation a {
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+  line-height: 2;
+  cursor: pointer; }
+
+.navigation a:hover {
+  background: #000;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  border-left: 10px solid purple;
+  width: 220px; }
+
+.navigation.is-active {
+  display: block; }
+
+.beast-nav, .foody-nav {
+  width: 100%;
+  -webkit-transition: .8s;
+  -moz-transition: .8s;
+  -o-transition: .8s;
+  transition: .8s; }
+
+.foody-nav p {
+  background: #BABBDA; }
+
+.beast-nav p {
+  background: #A5C47D; }
+
+#slideContent.is-active {
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  /* Cross Browser Opcaity */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 1;
+  left: 200px; }
+
+.fa.fa-cutlery.knife,
+.fa.fa-cutlery.fork {
+  overflow: hidden;
+  width: 9px;
+  font-size: 22px; }
+
+.fa.fa-cutlery.knife:before {
+  left: -9px;
+  position: relative; }
+
+.header-text {
+  font-size: 16px;
+  color: #333;
+  display: inline-block;
+  top: -32px;
+  position: relative; }
+
+/* Slide Buttons */
+.slide-pane {
+  font-size: 18px;
+  padding: 10px;
+  z-index: 1000;
+  position: relative; }
+
+.slide-pane i {
+  font-size: 20px; }
+
+.slide-pane .pane-left,
+.slide-pane .pane-right {
+  height: 150px;
+  width: 50px;
+  background: red;
+  margin: 1px;
+  position: fixed; }
+
+.slide-pane .pane-top,
+.slide-pane .pane-bottom {
+  width: 150px;
+  height: 50px;
+  background: red;
+  margin: 1px;
+  position: fixed; }
+
+.scroll-pane {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%; }
+
+.width-whole {
+  width: 100%; }
+
+.width-half {
+  width: 50%; }
+
+.width-none {
+  width: 0; }
+
+.height-whole {
+  height: 100%; }
+
+.height-half {
+  height: 50%; }
+
+.height-none {
+  height: 0; }
+
+.slide-pane .pane-top {
+  top: 0; }
+
+.slide-pane .pane-bottom {
+  bottom: 0; }
+
+.slide-pane .pane-left {
+  left: 0; }
+
+.slide-pane .pane-right {
+  right: 0; }
